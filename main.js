@@ -84,7 +84,7 @@ async function change() {
 
 var interval = setInterval(function () { change(); }, 20000  ); // время обновления в миллисекундах
 
-client.login('OTM1ODYxMDI0MTc3OTM4NDY0.YfEyfw.nKjIoquyP8xZe1Ocr8P2G0uoImg') // токен вашего бота
+client.login(process.env.BOT_TOKEN) // токен вашего бота
 
 // Хотите, чтобы ваш бот работал 24/7 бесплатно? Смотрите это видео: https://www.youtube.com/watch?v=wxdl4QK0am4
 
