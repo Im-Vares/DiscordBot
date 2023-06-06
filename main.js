@@ -1,4 +1,4 @@
-const Discord = require('discord.js') // подключение библиотеки                  Видео про бота https://youtu.be/1lzPIhTaPDY
+const Discord = require('discord.js') // подключение библиотеки               
 const client = new Discord.Client() // создание клиента
 
 client.on('ready', () =>{ // ивент, когда бот запускается https://discord.js.org/#/docs/main/stable/class/Client?scrollTo=e-ready
@@ -54,7 +54,7 @@ client.on('guildMemberAdd', member =>{ // ивент, когда пользов�
     .setFooter('Будь всегда на позитиве :3', 'https://cdn.discordapp.com/emojis/590614597610766336.gif?v=1')
     // .addField(`Участвуй в розыгрышах!`, `<#706487236220289054>`, true) // Добавляйте свои каналы по желанию
     // .addField(`Общайся в чате!`, `<#702364684199788625>`, true)
-    // .addField(`Смотри видео наших ютуберов!`, `<#702363551184060546>`, true)
+
     .setColor('RANDOM')
     member.send(embed); // отправка сообщения в лс 
 
@@ -67,7 +67,7 @@ client.on('guildMemberAdd', member =>{ // ивент, когда пользов�
     client.channels.cache.get('АЙДИ КАНАЛА С ЛОГАМИ').send(embed2) // айди вашего канала с логами
 })
 
-client.on('guildMemberRemove', member => { // ивент, когда пользователь выходит с сервера https://discord.js.org/#/docs/main/stable/class/Client?scrollTo=e-guildMemberRemove
+client.on('guildMemberRemove', member => { 
     let embed = new Discord.MessageEmbed()
     .setThumbnail(member.user.avatarURL())
     .setTitle(`Пользователь покинул сервер`)
@@ -85,7 +85,3 @@ async function change() {
 var interval = setInterval(function () { change(); }, 20000  ); // время обновления в миллисекундах
 
 client.login(process.env.BOT_TOKEN) // токен вашего бота
-
-// Хотите, чтобы ваш бот работал 24/7 бесплатно? Смотрите это видео: https://www.youtube.com/watch?v=wxdl4QK0am4
-
-// Bot by Sanich https://youtube.com/sanich - фишки, гайды по приложению Discord
